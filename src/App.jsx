@@ -4,7 +4,7 @@ import DefaultLayout from "../Layouts/DefaultLayout";
 
 import "./App.css";
 
-import Home from "../pages/Home";
+import Home from "../pages/Homepage";
 import Books from "../pages/Books";
 import BooksDetails from "../components/BooksDetails";
 
