@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "../pages/Homepage";
 import Books from "../pages/Books";
 import BooksDetails from "../components/BooksDetails";
+import Contacts from "../pages/Contacts";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" Component={Home} />
             <Route path="/books" Component={Books} />
             <Route path="/books/:id" Component={BooksDetails} />
+            <Route path="/contacts" Component={Contacts} />
           </Route>
         </Routes>
       </BrowserRouter>
