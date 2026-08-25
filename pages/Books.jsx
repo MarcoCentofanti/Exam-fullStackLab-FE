@@ -1,7 +1,8 @@
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import { useState, useEffect } from "react";
 
+import style from "./Books.module.css";
 import BookCard from "../components/BookCard";
 
 export default function Books() {
@@ -23,16 +24,17 @@ export default function Books() {
 
   useEffect(fetchBooks, []);
   return (
-    <>
+    <div>
       <h1>I nostri libri</h1>
-      {books.map((currentBook) => {
-        return (
-          <div key={currentBook.id}>
-            <BookCard book={currentBook} />
-            <Link to={`/books/${currentBook.id}`}>Leggi di più</Link>
-          </div>
-        );
-      })}
-    </>
+      <div className={style.books}>
+        {books.map((currentBook) => {
+          return (
+            <div key={currentBook.id}>
+              <BookCard book={currentBook} />
+            </div>
+          );
+        })}
+      </div>
+    </div>
   );
 }
