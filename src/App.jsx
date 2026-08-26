@@ -9,6 +9,7 @@ import Books from "../pages/Books";
 import BooksDetails from "../components/BooksDetails";
 import Contacts from "../pages/Contacts";
 import CreateBook from "../pages/CreateBook";
+import NotFound from "../pages/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/books/create" Component={CreateBook} />
             <Route path="/books/:id" Component={BooksDetails} />
             <Route path="/contacts" Component={Contacts} />
+            <Route path="*" Component={NotFound} />
           </Route>
         </Routes>
       </BrowserRouter>
