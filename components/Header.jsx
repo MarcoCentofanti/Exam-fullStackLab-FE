@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { useSavedBooks } from "../contexts/SavedBooksContext";
 
 export default function Header() {
+  const { savedBooks } = useSavedBooks();
+
   return (
     <header>
       <nav className="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
@@ -8,6 +11,9 @@ export default function Header() {
           <NavLink className="navbar-brand" to="/">
             LOGO LIBRERIA
           </NavLink>
+          <span className="badge text-bg-light ms-2">
+            Salvati: {savedBooks.length}
+          </span>
           <button
             className="navbar-toggler"
             type="button"
