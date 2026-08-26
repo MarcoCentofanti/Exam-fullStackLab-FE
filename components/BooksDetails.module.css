@@ -1,0 +1,40 @@
+.page {
+  padding-top: 1rem;
+}
+
+.cover {
+  background-color: var(--color-paper);
+  border: 6px solid var(--color-wood);
+}
+
+.meta {
+  color: var(--color-sage-dark);
+  font-weight: 600;
+}
+
+.button {
+  color: var(--color-sage-dark);
+}
+
+.button:hover {
+  color: var(--color-wood);
+  background-color: var(--color-sage-dark);
+}
+
+.reviewTitle {
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--color-sage);
+}
+
+.loading,
+.error {
+  padding: 1rem;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-left: 5px solid var(--color-sage);
+  border-radius: 0.5rem;
+}
+
+.error {
+  border-left-color: #8d3c35;
+}

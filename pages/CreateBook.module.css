@@ -1,0 +1,21 @@
+.formPage {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.formPanel {
+  padding: 2rem;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-top: 6px solid var(--color-sage);
+  border-radius: 1rem;
+}
+
+.main_button {
+  background-color: var(--color-green-button);
+}
+
+.main_button:hover {
+  color: var(--color-green-button);
+  background-color: var(--color-wood);
+}

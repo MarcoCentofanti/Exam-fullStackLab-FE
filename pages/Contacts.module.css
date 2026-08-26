@@ -1,0 +1,10 @@
+.card {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-top: 5px solid var(--color-sage);
+}
+
+.link {
+  color: var(--color-sage-dark);
+  font-weight: 600;
+}

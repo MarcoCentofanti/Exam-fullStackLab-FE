@@ -1,7 +1,24 @@
+/*custom properties*/
+:root {
+  --color-sage: #a8b5a2;
+  --color-sage-dark: #53614e;
+  --color-wood: #dfc49a;
+  --color-wood-light: #f5f0e7;
+  --color-ink: #1f1f1f;
+  --color-paper: #fffdf8;
+  --color-border: #d8d0c2;
+  --color-green-button: #1c5002;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(198, 197, 243);
+  background-color: var(--color-wood-light);
+  color: var(--color-ink);
+}
+
+a {
+  color: var(--color-sage-dark);
 }

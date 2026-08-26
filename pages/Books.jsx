@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import BookCard from "../components/BookCard";
+import styles from "./Books.module.css";
 
 export default function Books() {
   const [books, setBooks] = useState([]);
@@ -24,9 +25,14 @@ export default function Books() {
   useEffect(fetchBooks, []);
   return (
     <div>
-      <div className="d-flex justify-content-between">
+      <div
+        className={`d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 ${styles.pageHeader}`}
+      >
         <h1>I nostri libri</h1>
-        <Link className="btn btn-dark mb-4" to="/books/create">
+        <Link
+          className={`btn btn-dark align-self-start ${styles.main_button}`}
+          to="/books/create"
+        >
           Aggiungi libro
         </Link>
       </div>

@@ -1,3 +1,5 @@
+import styles from "./Contacts.module.css";
+
 export default function Contacts() {
   return (
     <section className="py-4">
@@ -9,7 +11,7 @@ export default function Contacts() {
 
       <div className="row g-4">
         <div className="col-12 col-md-6">
-          <div className="card h-100">
+          <div className={`card h-100 ${styles.card}`}>
             <div className="card-body">
               <h2 className="card-title h4">Dove trovarci</h2>
 
@@ -18,16 +20,20 @@ export default function Contacts() {
                 <br />
                 00100 Roma
                 <br />
-                <a href="mailto:info@libreria.it">info@libreria.it</a>
+                <a className={styles.link} href="mailto:info@libreria.it">
+                  info@libreria.it
+                </a>
                 <br />
-                <a href="tel:+390612345678">06 12345678</a>
+                <a className={styles.link} href="tel:+390612345678">
+                  06 12345678
+                </a>
               </address>
             </div>
           </div>
         </div>
 
         <div className="col-12 col-md-6">
-          <div className="card h-100">
+          <div className={`card h-100 ${styles.card}`}>
             <div className="card-body">
               <h2 className="card-title h4">Orari</h2>
 

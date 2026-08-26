@@ -1,0 +1,32 @@
+.hero {
+  padding: 3rem;
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+}
+
+.eyebrow {
+  color: var(--color-sage-dark);
+  font-weight: 700;
+}
+
+.main_button {
+  background-color: var(--color-green-button);
+}
+
+.main_button:hover {
+  color: var(--color-green-button);
+  background-color: var(--color-wood);
+}
+
+.heroImage {
+  width: 100%;
+  border: 6px solid var(--color-wood);
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    padding: 2rem;
+  }
+}

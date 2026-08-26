@@ -1,11 +1,12 @@
-.pageHeader {
-  gap: 1rem;
+.code {
+  color: var(--color-sage-dark);
 }
 
 .main_button {
   background-color: var(--color-green-button);
 }
+
 .main_button:hover {
-  background-color: var(--color-wood);
   color: var(--color-green-button);
+  background-color: var(--color-wood);
 }

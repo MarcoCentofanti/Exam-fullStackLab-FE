@@ -1,16 +1,31 @@
-.navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  list-style: none;
-  text-decoration: none;
-  text-decoration-line: none;
-
-  color: black;
-  background-color: rgb(219, 235, 197);
+.navbar {
+  background-color: var(--color-sage);
+  border-bottom: 2px solid var(--color-ink);
 }
 
-.navigation a {
-  color: black;
-  text-decoration: none;
+.brand {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.brand:hover {
+  color: var(--color-sage-dark);
+}
+
+.navLink {
+  color: var(--color-ink);
+}
+
+.navLink:hover {
+  color: var(--color-sage-dark);
+}
+
+.navLink[aria-current="page"] {
+  font-weight: 700;
+}
+
+.counter {
+  color: var(--color-ink);
+  background-color: var(--color-wood);
+  border: 1px solid var(--color-ink);
 }
