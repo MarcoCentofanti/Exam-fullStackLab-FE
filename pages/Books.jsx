@@ -1,6 +1,6 @@
 import axios from "axios";
-
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import BookCard from "../components/BookCard";
 
@@ -24,7 +24,12 @@ export default function Books() {
   useEffect(fetchBooks, []);
   return (
     <div>
-      <h1>I nostri libri</h1>
+      <div className="d-flex justify-content-between">
+        <h1>I nostri libri</h1>
+        <Link className="btn btn-dark mb-4" to="/books/create">
+          Aggiungi libro
+        </Link>
+      </div>
       <div className="row g-4">
         {books.map((currentBook) => {
           return (

@@ -8,6 +8,7 @@ import Home from "../pages/Homepage";
 import Books from "../pages/Books";
 import BooksDetails from "../components/BooksDetails";
 import Contacts from "../pages/Contacts";
+import CreateBook from "../pages/CreateBook";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route element={<DefaultLayout />}>
             <Route path="/" Component={Home} />
             <Route path="/books" Component={Books} />
+            <Route path="/books/create" Component={CreateBook} />
             <Route path="/books/:id" Component={BooksDetails} />
             <Route path="/contacts" Component={Contacts} />
           </Route>
