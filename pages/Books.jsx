@@ -2,7 +2,6 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 
-import style from "./Books.module.css";
 import BookCard from "../components/BookCard";
 
 export default function Books() {
@@ -26,10 +25,10 @@ export default function Books() {
   return (
     <div>
       <h1>I nostri libri</h1>
-      <div className={style.books}>
+      <div className="row g-4">
         {books.map((currentBook) => {
           return (
-            <div key={currentBook.id}>
+            <div className="col-12 col-md-6 col-lg-4" key={currentBook.id}>
               <BookCard book={currentBook} />
             </div>
           );
