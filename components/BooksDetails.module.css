@@ -38,3 +38,13 @@
 .error {
   border-left-color: #8d3c35;
 }
+
+.main_button {
+  background-color: var(--color-green-button);
+  color: var(--color-wood);
+}
+
+.main_button:hover {
+  background-color: var(--color-wood);
+  color: var(--color-green-button);
+}

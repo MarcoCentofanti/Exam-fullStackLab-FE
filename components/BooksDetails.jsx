@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+
 import ReviewCard from "./ReviewCard";
+
 import placeholderImage from "../src/assets/book-placeholder.webp";
 import styles from "./BooksDetails.module.css";
 
@@ -28,6 +29,24 @@ export default function BookDetails() {
         setIsLoading(false);
       });
   };
+
+  function deleteBook() {
+    const userConfirmed = window.confirm(
+      `Vuoi eliminare definitivamente "${bookDetails.title}"?`,
+    );
+
+    if (!userConfirmed) {
+      return;
+    }
+    axios
+      .delete(`http://localhost:3000/api/books/${id}`)
+      .then(() => {
+        navigate("/books");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 
   useEffect(fetchBookDetails, [id]);
 
@@ -56,13 +75,28 @@ export default function BookDetails() {
 
   return (
     <article className={styles.page}>
-      <button
-        className={`btn btn-outline-dark mb-4 ${styles.button}`}
-        type="button"
-        onClick={() => navigate(-1)}
-      >
-        ← Indietro
-      </button>
+      <div className="d-flex gap-2 mb-4">
+        <button
+          className={`btn btn-outline-dark  ${styles.button}`}
+          type="button"
+          onClick={() => navigate(-1)}
+        >
+          ← Indietro
+        </button>
+        <Link
+          className={`btn btn-dark ${styles.main_button}`}
+          to={`/books/${id}/edit`}
+        >
+          Modifica
+        </Link>
+        <button
+          className="btn btn-outline-danger"
+          onClick={deleteBook}
+          type="button"
+        >
+          Elimina
+        </button>
+      </div>
       <div className="row g-4 align-items-start">
         <div className="col-12 col-md-4">
           <img
