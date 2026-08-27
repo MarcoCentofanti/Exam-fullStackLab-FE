@@ -2,10 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
-import ReviewCard from "./ReviewCard";
+import ReviewCard from "../components/ReviewCard";
 
 import placeholderImage from "../src/assets/book-placeholder.webp";
-import styles from "./BooksDetails.module.css";
+import styles from "./BookDetails.module.css";
 
 export default function BookDetails() {
   const params = useParams();
